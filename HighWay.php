@@ -1,10 +1,11 @@
 <?php
     abstract class HighWay
     {
-        protected array $currentVehicles;
+        protected array $currentVehicles = [];
         protected int $nbLane;
         protected int $maxSpeed;
 
+        abstract public function addVehicle(vehicle $vehicle): void;
 
         public function getCurrentVehicles(): array
         {
